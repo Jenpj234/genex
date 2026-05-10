@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Categories from './pages/Categories'
 import Cart from './pages/Cart'
@@ -15,6 +15,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/nearby" element={<Nearby />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Navbar />
       </CartProvider>
